@@ -1,0 +1,58 @@
+<div class="chips__item"  [ngClass]="{'chips__active': isActive === true}" >
+    <div [ngSwitch]="chips">
+        <div class="circle-container" *ngSwitchCase="'Education'">
+            <div class="circle-image">
+               <img src="/assets/icons/education.svg" alt = "Education" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Dining'">
+            <div class="circle-image">
+                <img src="/assets/icons/dining.svg" alt = "Dining" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Promotions'">
+            <div class="circle-image">
+                <img src="/assets/icons/promotions.svg" alt = "Promotions" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Office'">
+            <div class="circle-image">
+                <img src="/assets/icons/office.svg" alt = "Office" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Attractions'">
+            <div class="circle-image">
+                <img src="/assets/icons/attractions.svg" alt = "Attractions" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Family'">
+            <div class="circle-image">
+                <img src="/assets/icons/family.svg" alt = "Family" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Health'">
+            <div class="circle-image">
+                <img src="/assets/icons/health.svg" alt = "Health" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Sports'">
+            <div class="circle-image">
+                <img src="/assets/icons/sports.svg" alt = "Sports" height="32" width="32"/>
+            </div>
+        </div>
+        <div class="circle-container" *ngSwitchCase="'Travel'">
+            <div class="circle-image">
+                <img src="/assets/icons/travel.svg" alt = "Travel" height="32" width="32"/>
+            </div>
+        </div>
+        <div *ngSwitchDefault></div>
+    </div>
+    
+{{chips}}
+
+<div *ngIf="isEditable" (click)="onClick()" style="cursor:pointer;">
+    <img *ngIf="isActive" src="/assets/icons/cross.svg" alt = "Travel" height="16" width="16"/>
+    <img *ngIf="!isActive" src="/assets/icons/plus.svg" alt = "Travel" height="16" width="16"/>
+</div>
+
+</div>
